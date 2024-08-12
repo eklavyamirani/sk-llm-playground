@@ -33,5 +33,14 @@
 		"OPENAI_APIKEY": {
 			"description": "OPEN AI api key"
 		}
-	},
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csdevkit",
+                "Gruntfuggly.todo-tree",
+                "GitHub.copilot"
+            ]
+        }
+    },
 }
