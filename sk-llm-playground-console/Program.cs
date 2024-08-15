@@ -27,6 +27,7 @@ var builder = Kernel.CreateBuilder().AddOpenAIChatCompletion(modelId: modelId, a
 
 // add plugins
 builder.Plugins.AddFromType<EmailPlugin>();
+builder.Plugins.AddFromType<TimePlugin>();
 
 // Build the kernel
 Kernel kernel = builder.Build();
@@ -66,6 +67,8 @@ do {
 
     // Print the results
     Console.WriteLine("Assistant > " + result);
+
+    Console.WriteLine("Metadata: " + result.Metadata?.Select(x => $"{x.Key}: {x.Value}").Aggregate((x, y) => x + ", " + y));
 
     // Add the message from the agent to the chat history
     history.AddMessage(result.Role, result.Content ?? "No content");

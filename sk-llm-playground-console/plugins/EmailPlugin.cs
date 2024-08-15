@@ -7,6 +7,8 @@ public class EmailPlugin
     [Description("Send an email to the specified recipient.")]
     public async Task SendEmailAsync(string to, string subject, string body)
     {
+        Console.WriteLine("Executing email plugin");
+
         if (string.IsNullOrWhiteSpace(to))
         {
             throw new ArgumentException("Recipient email address cannot be null or empty.", nameof(to));
