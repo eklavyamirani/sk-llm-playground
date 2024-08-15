@@ -2,10 +2,21 @@
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
+using Microsoft.Extensions.Configuration; // Add this line
 
 // FIXME: @eklavya fill the config below
-var modelId ="";
-var apiKey = "";
+var modelId ="gpt-4o-mini-2024-07-18";
+// write code to get the API key from dotnet user secrets
+var configuration = new ConfigurationBuilder()
+    .AddUserSecrets<Program>()
+    .Build();
+
+var apiKey = configuration["OpenAI:apiKey"];
+
+if (string.IsNullOrWhiteSpace(apiKey))
+{
+    throw new ArgumentException("Please set the OpenAI API key in the user secrets.");
+}
 
 // Create a kernel with Azure OpenAI chat completion
 var builder = Kernel.CreateBuilder().AddOpenAIChatCompletion(modelId: modelId, apiKey: apiKey);

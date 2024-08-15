@@ -6,7 +6,7 @@ cd sk-llm-playground-console
 echo "init dotnet user secrets"
 dotnet user-secrets init
 
-if [ -z "$OPENAI_APIKEY"]
+if [[ -z "$OPENAI_APIKEY" ]]
 then
     echo "API KEY NOT SET"
     exit 2
