@@ -25,6 +25,9 @@ var builder = Kernel.CreateBuilder().AddOpenAIChatCompletion(modelId: modelId, a
 // TODO: @eklavya add logging
 ////builder.Services.AddLogging(services => services.AddConsole().SetMinimumLevel(LogLevel.Trace));
 
+// add plugins
+builder.Plugins.AddFromType<EmailPlugin>();
+
 // Build the kernel
 Kernel kernel = builder.Build();
 var chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
