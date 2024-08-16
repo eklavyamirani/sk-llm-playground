@@ -19,7 +19,7 @@ if (string.IsNullOrWhiteSpace(apiKey))
     throw new ArgumentException("Please set the OpenAI API key using <<OpenAI:apiKey>> in the user secrets.");
 }
 
-// Create a kernel with Azure OpenAI chat completion
+// Create a kernel with OpenAI chat completion
 var builder = Kernel.CreateBuilder().AddOpenAIChatCompletion(modelId: modelId, apiKey: apiKey);
 
 // TODO: @eklavya add logging

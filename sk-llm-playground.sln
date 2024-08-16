@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLlmPlayground.Console", "sk-llm-playground-console\MyLlmPlayground.Console.csproj", "{1217BACE-DF1F-4C99-8A7C-2A0F9ED2FC4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiAgent.Console", "multiagent-console\MultiAgent.Console.csproj", "{950FE2BD-40A6-4F28-86C7-505B705CC769}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{1217BACE-DF1F-4C99-8A7C-2A0F9ED2FC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1217BACE-DF1F-4C99-8A7C-2A0F9ED2FC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1217BACE-DF1F-4C99-8A7C-2A0F9ED2FC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{950FE2BD-40A6-4F28-86C7-505B705CC769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{950FE2BD-40A6-4F28-86C7-505B705CC769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{950FE2BD-40A6-4F28-86C7-505B705CC769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{950FE2BD-40A6-4F28-86C7-505B705CC769}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
