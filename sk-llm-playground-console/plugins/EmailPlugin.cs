@@ -3,10 +3,11 @@ using Microsoft.SemanticKernel;
 
 public class EmailPlugin
 {
-    [KernelFunction("SendEmail")]
+    [KernelFunction("send_email")]
     [Description("Send an email to the specified recipient.")]
     public async Task SendEmailAsync(string to, string subject, string body)
     {
+        // TODO: @eklavya need a prompt to ask for the inputs instead of making them up.
         Console.WriteLine("Executing email plugin");
 
         if (string.IsNullOrWhiteSpace(to))
