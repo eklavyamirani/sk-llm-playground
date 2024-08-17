@@ -15,4 +15,9 @@
     <PackageReference Include="Microsoft.SemanticKernel.Agents.Core" Version="1.18.0-alpha" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="agents\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

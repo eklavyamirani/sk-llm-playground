@@ -31,7 +31,7 @@
 	// "remoteUser": "root",
 	"secrets": {
 		"OPENAI_APIKEY": {
-			"description": "OPEN AI api key"
+			"description": "OPEN AI api key. Should be stored in a file ./devcontainer.env"
 		}
     },
     "customizations": {
